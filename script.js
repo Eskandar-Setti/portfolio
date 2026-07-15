@@ -24,3 +24,16 @@ window.addEventListener("scroll", () => {
     }
 
 });
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+// Close menu after clicking a link
+document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+    });
+});
